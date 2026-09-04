@@ -1,0 +1,72 @@
+name: Report an issue or suggestion
+description: Report a problem or suggest an improvement for Moonshine.
+title: "[Feedback]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Moonshine. Please describe the problem or suggestion as clearly as possible.
+
+        This issue will be public. Do not include passwords, authentication tokens, save data, or other personal information.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Application crash
+        - Bug or incorrect behavior
+        - Installation or update issue
+        - Account or online services issue
+        - Game or ROM issue
+        - Controls or input issue
+        - Display, audio, or performance issue
+        - Feature suggestion
+        - Documentation improvement
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: moonshine_version
+    attributes:
+      label: Moonshine version
+      description: For a problem, enter the version shown by Moonshine or in the downloaded release filename.
+      placeholder: 0.2.0
+
+  - type: dropdown
+    id: operating_system
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Linux
+        - Not applicable
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: rom
+    attributes:
+      label: ROM
+      description: If the problem happened while playing, enter the ROM name and version.
+      placeholder: ROM name and version
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to report or suggest?
+      description: Describe the problem or suggestion and include any useful system details, logs, screenshots, or additional context.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: Steps to reproduce
+      description: For a problem, list the shortest sequence of actions that reproduces it.
+      placeholder: |
+        1. Open Moonshine
+        2. Select ...
+        3. Press ...
